@@ -551,6 +551,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     font-size: 16px;
 }
 .single-profile.profile-no-border{border-right:transparent;}
+.single-skill.profile-no-border{border-right:transparent;}
 .profile-border {
     border-bottom: 1px solid #b2c1ce;
 }
@@ -851,5 +852,21 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 @keyframes example {
     0%   {bottom:0px;}
     100%  {bottom:7px;}
+}
+
+
+.single-skill {
+    position: relative;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #b2c1ce;
+    overflow:hidden;
+    -webkit-transition:background 0.5s linear; 
+    -moz-transition:background 0.5s linear; 
+    -ms-transition:background 0.5s linear; 
+    -o-transition:background 0.5s linear; 
+    transition:background 0.5s linear;
 }
 /*========================Thank you=================
