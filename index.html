@@ -1130,40 +1130,40 @@
 			// If not, generate a new one and store it
 			uniqueID = generateUniqueID();
 			localStorage.setItem('uniqueID', uniqueID);
-			console.log("New Unique ID Generated and Stored:", uniqueID);
+			// console.log("New Unique ID Generated and Stored:", uniqueID);
 		} else {
 			// If exists, use the stored ID
-			console.log("Retrieved Unique ID from Local Storage:", uniqueID);
+			// console.log("Retrieved Unique ID from Local Storage:", uniqueID);
 		}
 		// Device and Browser Information
-		console.log("User-Agent:", navigator.userAgent); // Browser and OS details
-		console.log("Platform:", navigator.platform); // OS platform
-		console.log("Screen Resolution:", screen.width + "x" + screen.height); // Screen size
-		console.log("Color Depth:", screen.colorDepth); // Color depth of the display
+		// console.log("User-Agent:", navigator.userAgent); // Browser and OS details
+		// console.log("Platform:", navigator.platform); // OS platform
+		// console.log("Screen Resolution:", screen.width + "x" + screen.height); // Screen size
+		// console.log("Color Depth:", screen.colorDepth); // Color depth of the display
 
 		// Network Information (if supported)
-		if ('connection' in navigator) {
-			console.log("Network Type:", navigator.connection.effectiveType); // Network type (e.g., 4g)
-			console.log("Downlink Speed:", navigator.connection.downlink, "Mbps"); // Download speed
-		} else {
-			console.log("Network Information API not supported.");
-		}
+		// if ('connection' in navigator) {
+		// 	console.log("Network Type:", navigator.connection.effectiveType); // Network type (e.g., 4g)
+		// 	console.log("Downlink Speed:", navigator.connection.downlink, "Mbps"); // Download speed
+		// } else {
+		// 	console.log("Network Information API not supported.");
+		// }
 
 		// Language and Region
-		console.log("Language:", navigator.language); // Browser language
+		// console.log("Language:", navigator.language); // Browser language
 
 		// Online/Offline Status
-		console.log("Online Status:", navigator.onLine ? "Online" : "Offline");
+		// console.log("Online Status:", navigator.onLine ? "Online" : "Offline");
 
 		// Battery Status (if supported)
-		if (navigator.getBattery) {
-			navigator.getBattery().then(function (battery) {
-				console.log("Battery Level:", battery.level * 100 + "%");
-				console.log("Charging:", battery.charging ? "Yes" : "No");
-			});
-		} else {
-			console.log("Battery Status API not supported.");
-		}
+		// if (navigator.getBattery) {
+		// 	navigator.getBattery().then(function (battery) {
+		// 		console.log("Battery Level:", battery.level * 100 + "%");
+		// 		console.log("Charging:", battery.charging ? "Yes" : "No");
+		// 	});
+		// } else {
+		// 	console.log("Battery Status API not supported.");
+		// }
 
 
 
@@ -1198,7 +1198,7 @@
 					// }
 				})
 				.catch(error => {
-					console.error("Error sending visit data:", error);
+					// console.error("Error sending visit data:", error);
 				});
 
 		}
@@ -1225,7 +1225,7 @@
 					}
 				})
 				.catch(error => {
-					console.error("Error during PATCH request:", error);
+					// console.error("Error during PATCH request:", error);
 				});
 		}
 
@@ -1243,7 +1243,7 @@
 					if (response.ok) {
 						return response.json();
 					} else {
-						console.error("Failed to fetch records. Status:", response.status);
+						// console.error("Failed to fetch records. Status:", response.status);
 					}
 				})
 				.then(data => {
@@ -1253,7 +1253,7 @@
 						if (Array.isArray(data.items)) {
 							if (data.items && data.items.length > 0) {
 								data.items.forEach((item, index) => {
-									console.log(`Item ${index + 1}:`, item);
+									// console.log(`Item ${index + 1}:`, item);
 									id = item.id
 									count = item.count
 									count++;
@@ -1271,12 +1271,12 @@
 
 						} else {
 							// If it's an object, log it directly
-							console.log("Single Object Data:", data);
+							// console.log("Single Object Data:", data);
 						}
 					}
 				})
 				.catch(error => {
-					console.error("Error during GET request:", error);
+					// console.error("Error during GET request:", error);
 				});
 		}
 
