@@ -1135,38 +1135,7 @@
 			// If exists, use the stored ID
 			// console.log("Retrieved Unique ID from Local Storage:", uniqueID);
 		}
-		// Device and Browser Information
-		// console.log("User-Agent:", navigator.userAgent); // Browser and OS details
-		// console.log("Platform:", navigator.platform); // OS platform
-		// console.log("Screen Resolution:", screen.width + "x" + screen.height); // Screen size
-		// console.log("Color Depth:", screen.colorDepth); // Color depth of the display
-
-		// Network Information (if supported)
-		// if ('connection' in navigator) {
-		// 	console.log("Network Type:", navigator.connection.effectiveType); // Network type (e.g., 4g)
-		// 	console.log("Downlink Speed:", navigator.connection.downlink, "Mbps"); // Download speed
-		// } else {
-		// 	console.log("Network Information API not supported.");
-		// }
-
-		// Language and Region
-		// console.log("Language:", navigator.language); // Browser language
-
-		// Online/Offline Status
-		// console.log("Online Status:", navigator.onLine ? "Online" : "Offline");
-
-		// Battery Status (if supported)
-		// if (navigator.getBattery) {
-		// 	navigator.getBattery().then(function (battery) {
-		// 		console.log("Battery Level:", battery.level * 100 + "%");
-		// 		console.log("Charging:", battery.charging ? "Yes" : "No");
-		// 	});
-		// } else {
-		// 	console.log("Battery Status API not supported.");
-		// }
-
-
-
+		
 
 		function postData() {
 			// Data to send to the API
@@ -1174,7 +1143,8 @@
 				"user_agent": navigator.userAgent,
 				"platform": navigator.platform,
 				"unique_id": uniqueID,
-				"count": 1
+				"count": 1,
+				"url":"https://cv.anishmaharjan051.com.np/"
 			};
 			// Send data to the API
 			fetch('https://anish.pockethost.io/api/collections/websiteVisits/records', {
